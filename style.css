@@ -159,3 +159,76 @@ nav a {
 .main-nav > li:not(:last-child) {
     border-bottom: 1px solid rgb(11, 11, 11);
 }
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.form-input{
+    border: 2px solid #ccc; 
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    width: 100%;
+}
+.form-input:focus {
+    outline: none;
+    border: 2px solid #261f17;
+}
+
+[type="submit"] {
+    background: rgb(255, 192, 248);
+    color: #261f17;
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    border-radius: 4px;
+    border: 0;
+    padding: .5em;
+    cursor: pointer;
+}
+
+[type="submit"]:hover,
+[type="submit"]::focus {
+    background: #c49d75;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.error {
+    border-color: red;
+}
+.error-message {
+    color: red;
+    margin: -1em 0 1.5em;
+}
+
+@media screen and (min-width:1065px) {
+    form {
+        width: 50%;
+        margin: 3em auto;
+    }
+    .footer-column {
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width: 1205px) {
+    .featured-image-container::before {
+        position:absolute;
+        top: 10%;
+        left: -15%;
+        width: 100%;
+        height: 100%;
+    }
+    
+}
