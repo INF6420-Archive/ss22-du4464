@@ -10,7 +10,7 @@ body {
     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 a {
-    color: black;
+    color: white;
 }
 img {
     max-width: 25%;
@@ -30,9 +30,8 @@ nav a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
-    background: linear-gradient(to left, silver, rgb(255, 192, 248));
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: black;
+    background: black;
     color: #FFF;
     height: 100px;
     padding: 1em;
@@ -53,7 +52,7 @@ nav a {
 
 .menu-icon {
     height: 100%;
-    width: 50px;
+    width: 100px;
     cursor: pointer;
     display: inline-block;
     flex-direction: column;
@@ -152,8 +151,8 @@ nav a {
     margin: 0;
     padding: 0.5em 0;
     width: 100%;
-    color: white;
-    background-color: rgb(254, 251, 251); 
+    color: blue;
+    background-color: blue; 
 }
 
 .main-nav > li:not(:last-child) {
@@ -181,7 +180,7 @@ label {
 }
 
 [type="submit"] {
-    background: rgb(255, 192, 248);
+    background: rgb(65, 181, 220);
     color: #261f17;
     width: 100%;
     font-size: 1.5em;
@@ -196,7 +195,7 @@ label {
 
 [type="submit"]:hover,
 [type="submit"]::focus {
-    background: #c49d75;
+    background: rgb(65, 181, 220);
 }
 
 textarea {
@@ -231,4 +230,23 @@ textarea {
         height: 100%;
     }
     
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    background: black;
+    color: #FFF;
+    text-align: center;
 }

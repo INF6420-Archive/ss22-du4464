@@ -8,18 +8,26 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html"> 
-            <img src="images/TempLogo.jpeg" alt="Carla Sylvester Logo"></a>
-            <ul>
-                <li><a href="search.html">Search</a></li>
+        <nav class="main-menu">
+            <h1>Welcome to Roselyn Sylvester's Portfolio Site</h1>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon" aria-label="Toggle for menu"></span></label>
+            <ul class="main-nav">
+                <li><a href="index.html">Homepage</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-
+        <br>
+        <h1>Contact Me:</h1>
+        <br>
+        <center>
+            <a href="index.html" class="site-name"><img src="images/pic.jpeg" alt="Sylvester's image" 
+                class="center"></a>
+        </center>
+        <br>
         <form action="https://formspree.io/f/xjvlqnbj" method="post" class="validate">
             <label for="name">Full Name</label>
             <input name="name" id="name" type="name" class="form-input">
@@ -33,7 +41,10 @@
           </form>
 
     </main>
-    <footer>Copy Right Information</footer>
+    <footer>
+        <p>©2022 RoselynSylvester</p>
+        <p><a href="contact.html">CONTACT</a></p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
