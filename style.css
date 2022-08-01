@@ -22,24 +22,28 @@ address {
 nav a {
     text-transform: uppercase;
     text-decoration: none;
+    width: 100%;
+    text-align: center;
 }
 
 .main-menu {
     display: flex;
     position: relative;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     background-color: black;
     background: black;
     color: #FFF;
-    height: 100px;
+    min-height: 100px;
     padding: 1em;
 }
 
 .main-nav {
     display: flex;
     flex-direction: row;
+    flex-basis: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -51,13 +55,7 @@ nav a {
 }
 
 .menu-icon {
-    height: 100%;
-    width: 100px;
     cursor: pointer;
-    display: inline-block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 28px 20px;
     position: relative;
     user-select: none;
@@ -76,42 +74,41 @@ nav a {
     width: 18px;
 }
 
-.navicon, 
-.navicon::before,
-.navicon 
-.navicon::after {
+.menu-icon .navicon::before,
+.menu-icon .navicon::after {
     background: rgb(247, 246, 246);
     content: "";
     display: block;
-    height: 4px;
-    width: 30px;
+    height: 100%;
+    width: 100%;
     position: absolute;
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     border-radius: 2px;
 }
 
-.navicon::before {
-    content: '';
-    margin-top: -8px;
+.menu-icon .navicon::before {
+    top: 5px;
 }
 
-.navicon::after {
-    content: '';
-    margin-top: 8px;
+.menu-icon .navicon::after {
+    top: -5px;
 }
 
 #menu-btn:checked + .menu-icon .navicon::before {
-    margin-top: 0px;
-    transform: rotate(405deg);
+    transform: rotate(-45deg);
 }
 
 #menu-btn:checked + .menu-icon .navicon {
-    background: rgb(242, 239, 239);
+    background: transparent;
 }
 
 #menu-btn:checked + .menu-icon .navicon::after {
-    margin-top: 0px;
-    transform: rotate(-405deg);
+    transform: rotate(45deg);
+}
+
+#menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+#menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
 }
 
 @media (max-width: 400px) {
